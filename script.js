@@ -3,7 +3,8 @@ logo = document.querySelector(".logo");
 body = document.querySelector("body");
 header = document.querySelector("header");
 content = document.querySelector(".content");
-delayLogo = 6000;
+about = document.querySelector(".about");
+delayLogo = 1000;
 
 document.documentElement.style.setProperty("--delay-logo", delayLogo + "ms");
 
@@ -14,12 +15,11 @@ funcLogo();
 function funcLogo()
 {
     setTimeout(function(){ 
-        logo.classList.add("hide");
+        logo.classList.add("non-display");
         body.style.backgroundColor = backgroundColor;
         setTimeout(function(){ 
-          header.classList.remove("hide");
-          content.classList.remove("hide");
-          body.style.height = "5000px";
+          header.classList.remove("non-display");
+          content.classList.remove("non-display");
           window.onscroll = function() {myFunction()};
       }, 500);
         
@@ -31,11 +31,22 @@ mainButton.addEventListener('click', _ => {
 })
 
 function myFunction() {
+
   if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400)
   {
-    document.querySelector(".content .text").classList.remove("hide");
+    document.querySelector(".content .presentation").style.opacity = "0";
   } else
   {
-    document.querySelector(".content .text").classList.add("hide");
+    document.querySelector(".content .presentation").style.opacity = "1";
+  }
+
+  if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600)
+  {
+    document.querySelector(".about").style.opacity = "1";
+    document.querySelector(".about img").style.transform = "scale(1)";
+  } else
+  {
+    document.querySelector(".about").style.opacity = "0";
+    document.querySelector(".about img").style.transform = "scale(0.8)";
   }
 }
