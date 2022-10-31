@@ -2,11 +2,13 @@
     --color-palette-light-background: #133040;
     --color-palette-background: #0A192F;
     --color-palette-dark-background: #071221;
+    --color-palette-darker-background: #020C1B;
     --color-palette-light-turquoise: #64FFDA;
     --color-palette-dark-turquoise: #57DCC0;
     --color-palette-light-gray: #CCD6F6;
     --color-palette-gray: #8892B0;
     --color-palette-dark-gray: #495670;
+    --delay-logo: "";
 }
 
 * {
@@ -21,6 +23,27 @@
     }
     to {
       opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+      opacity: 0;
+    }
+    10% {
+        opacity: 0;
+      }
+    50%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 0;
     }
 }
 
@@ -52,8 +75,30 @@
 
 body {
     display: flex;
-    background-color: var(--color-palette-background);
-    height: 5000px;
+    height: 100%;
+    flex-direction: column;
+    transition: background-color 1s;
+    background-color: var(--color-palette-darker-background);
+}
+
+.logo {
+    margin: 0px auto;
+    margin-top: 15%;
+    align-self: flex-start;
+}
+
+.logo button{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    font-size: 150px;
+    color: var(--color-palette-light-turquoise);
+    background-color: var(--color-palette-darker-background);
+    border: 10px solid var(--color-palette-light-turquoise); 
+    transition: transform 1s;
+    opacity: 0;
+    animation: fade-out var(--delay-logo);
+    animation-fill-mode: both;
 }
 
 body::-webkit-scrollbar {
@@ -92,6 +137,9 @@ header {
     width: 100%;
     overflow: hidden;
     box-shadow: 0px 5px 5px var(--color-palette-dark-background);
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: both;
 }
 
 .main-button {
@@ -104,6 +152,10 @@ header {
     background-color: var(--color-palette-background);
     border: 3px solid var(--color-palette-light-turquoise); 
     transition: transform 1s;
+    opacity: 0;
+    animation: fade-in 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
 }
 
 .main-button:hover {
@@ -218,4 +270,8 @@ nav ul li a:hover {
 
 .text {
     width: 400px;
+    color: var(--color-palette-dark-gray);
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: both;
 }
