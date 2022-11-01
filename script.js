@@ -57,8 +57,6 @@ function myFunction() {
     document.querySelector(".about img").style.transform = "scale(0.8)";
   }
 
-  console.log(document.documentElement.scrollTop);
-
   if (inScrollRange(1000, 1500) || screen.width < 1000)
   {
     document.querySelector(".experience").style.opacity = "1";
