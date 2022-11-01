@@ -4,6 +4,8 @@ body = document.querySelector("body");
 header = document.querySelector("header");
 content = document.querySelector(".content");
 about = document.querySelector(".about");
+experience = document.querySelector(".experience");
+work = document.querySelector(".work");
 delayLogo = 1000;
 
 document.documentElement.style.setProperty("--delay-logo", delayLogo + "ms");
@@ -30,17 +32,22 @@ mainButton.addEventListener('click', _ => {
     location.reload();
 })
 
+function inScrollRange(a, b)
+{
+  return (a <= document.documentElement.scrollTop && document.documentElement.scrollTop <= b);
+}
+
 function myFunction() {
 
-  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400)
-  {
-    document.querySelector(".content .presentation").style.opacity = "0";
-  } else
+  if (inScrollRange(0, 300) || screen.width < 1000)
   {
     document.querySelector(".content .presentation").style.opacity = "1";
+  } else
+  {
+    document.querySelector(".content .presentation").style.opacity = "0";
   }
 
-  if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600)
+  if (inScrollRange(500, 900) || screen.width < 1000)
   {
     document.querySelector(".about").style.opacity = "1";
     document.querySelector(".about img").style.transform = "scale(1)";
@@ -48,5 +55,23 @@ function myFunction() {
   {
     document.querySelector(".about").style.opacity = "0";
     document.querySelector(".about img").style.transform = "scale(0.8)";
+  }
+
+  console.log(document.documentElement.scrollTop);
+
+  if (inScrollRange(1000, 1500) || screen.width < 1000)
+  {
+    document.querySelector(".experience").style.opacity = "1";
+  } else
+  {
+    document.querySelector(".experience").style.opacity = "0";
+  }
+
+  if (inScrollRange(1600, 2100) || screen.width < 1000)
+  {
+    document.querySelector(".work").style.opacity = "1";
+  } else
+  {
+    document.querySelector(".work").style.opacity = "0";
   }
 }

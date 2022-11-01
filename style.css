@@ -1,4 +1,5 @@
 :root {
+    --color-palette-hover-background: #112240;
     --color-palette-light-background: #133040;
     --color-palette-background: #0A192F;
     --color-palette-dark-background: #071221;
@@ -257,7 +258,7 @@ nav ul li a:hover {
 .presentation h3 {
     color: var(--color-palette-gray);
     font-size: 60px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     opacity: 0;
     animation: fade-in-up 1s;
     animation-delay: 2.4s;
@@ -281,6 +282,7 @@ nav ul li a:hover {
     flex-direction: row;
     align-items: center;
     margin-top: 100px;
+    padding-left: 100px;
     padding-top: 200px;
     opacity: 0;
     transition: opacity 1s;
@@ -312,7 +314,8 @@ nav ul li a:hover {
 .about p {
     margin-top: 50px;
     max-width: 600px;
-    color: var(--color-palette-light-turquoise);
+    color: var(--color-palette-gray);
+    margin-bottom: 50px;
 }
 
 .separator{
@@ -321,4 +324,103 @@ nav ul li a:hover {
     margin-left: 30px;
     width: 350px;
     border: 1px solid var(--color-palette-darker-gray);
+}
+
+.experience {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 100px;
+    padding-top: 200px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.experience .experience-init {
+    display: flex;
+    align-items: center;
+}
+
+.experience div h1 {
+    display: inline;
+    color: var(--color-palette-light-gray);
+}
+
+.experience div h2 {
+    display: inline;
+    color: var(--color-palette-light-turquoise);
+}
+
+.experience p {
+    margin-top: 50px;
+    max-width: 600px;
+    color: var(--color-palette-gray);
+    margin-bottom: 50px;
+}
+
+.experience-list {
+    margin-top: 50px;
+    display: flex; 
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.experience-buttons{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.experience-description p{
+    margin: 0;
+    margin-left: 40px;
+}  
+
+.experience-button {
+    width: 140px;
+    height: 40px;
+    background-color: var(--color-palette-background);
+    color: var(--color-palette-gray);
+    border: 0px;
+    border-left: 2px solid var(--color-palette-darker-gray);
+    text-align: start;
+    padding-left: 20px;
+    transition: background-color 500ms, color 500ms;
+}
+
+.experience-button:hover {
+    background-color: var(--color-palette-hover-background);
+    color: var(--color-palette-dark-turquoise);
+}
+
+.work {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 100px;
+    padding-top: 200px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.work .work-init {
+    display: flex;
+    align-items: center;
+}
+
+.work div h1 {
+    display: inline;
+    color: var(--color-palette-light-gray);
+}
+
+.work div h2 {
+    display: inline;
+    color: var(--color-palette-light-turquoise);
+}
+
+.work p {
+    margin-top: 50px;
+    max-width: 600px;
+    color: var(--color-palette-gray);
+    margin-bottom: 50px;
 }
