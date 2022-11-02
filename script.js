@@ -9,7 +9,7 @@ experienceButtons = document.querySelectorAll(".experience-button");
 experienceDescriptionSections = document.querySelectorAll(".experience-description-section");
 work = document.querySelector(".work");
 contact = document.querySelector(".contact");
-delayLogo = 1000;
+delayLogo = 6000;
 
 for (let i = 0; i < experienceButtons.length; i++) {
   experienceButtons[i].addEventListener("click", onExperienceButtonClick.bind(this, i));

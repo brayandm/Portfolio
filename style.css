@@ -92,7 +92,15 @@
     }
 }
 
-.non-display {
+.logo.non-display {
+    display: none;
+}
+
+.content.non-display {
+    display: none;
+}
+
+header.non-display {
     display: none;
 }
 
