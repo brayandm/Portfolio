@@ -353,21 +353,14 @@ nav ul li a:hover {
     align-items: center;
 }
 
-.experience div h1 {
+.experience-init h1 {
     display: inline;
     color: var(--color-palette-light-gray);
 }
 
-.experience div h2 {
+.experience-init h2 {
     display: inline;
     color: var(--color-palette-light-turquoise);
-}
-
-.experience p {
-    margin-top: 50px;
-    max-width: 600px;
-    color: var(--color-palette-gray);
-    margin-bottom: 50px;
 }
 
 .experience-list {
@@ -383,11 +376,6 @@ nav ul li a:hover {
     align-items: center;
 }
 
-.experience-description p {
-    margin: 0;
-    margin-left: 40px;
-}
-
 .experience-button {
     width: 140px;
     height: 40px;
@@ -397,12 +385,103 @@ nav ul li a:hover {
     border-left: 2px solid var(--color-palette-darker-gray);
     text-align: start;
     padding-left: 20px;
-    transition: background-color 200ms, color 200ms;
+    transition: background-color 300ms, color 300ms, border-left-color 300ms;
 }
 
 .experience-button:hover {
     background-color: var(--color-palette-hover-background);
     color: var(--color-palette-dark-turquoise);
+}
+
+.experience-button.clicked {
+    background-color: var(--color-palette-hover-background);
+    color: var(--color-palette-dark-turquoise);
+    border-left-color: var(--color-palette-light-turquoise);
+}
+
+.experience-description-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.experience-description-section.non-display {
+    display: none;
+}
+
+.experience-description-section .title {
+    display: flex;
+    flex-direction: row;
+}
+
+.experience-description-section .title h1 {
+    color: var(--color-palette-light-gray);
+    font-size: 18px;
+}
+
+.experience-description-section p {
+    color: var(--color-palette-gray);
+    font-size: 18px;
+}
+
+.experience-description-section .title a {
+    transition: text-decoration 300ms;
+}
+
+.experience-description-section .title a:link {
+    text-decoration: none;
+}
+
+.experience-description-section .title a:visited {
+    text-decoration: none;
+}
+
+.experience-description-section .title a:hover {
+    text-decoration: underline var(--color-palette-dark-turquoise);
+}
+
+.experience-description-section .title a:focus {
+    text-decoration: underline var(--color-palette-dark-turquoise);
+}
+
+.experience-description-section .title a:active {
+    text-decoration: underline var(--color-palette-dark-turquoise);
+}
+
+
+.experience-description-section .title h2 {
+    color: var(--color-palette-dark-turquoise);
+    font-size: 18px;
+}
+
+.experience-description-section h3 {
+    margin-top: 10px;
+    color: var(--color-palette-gray);
+    font-size: 15px;
+}
+
+.experience-description-list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-element {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.experience-element i {
+    align-self: center;
+    color: var(--color-palette-dark-turquoise);
+}
+
+.experience-element p {
+    align-self: center;
+    color: var(--color-palette-gray);
+    margin-left: 20px;
 }
 
 .work {
