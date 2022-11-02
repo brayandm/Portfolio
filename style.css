@@ -114,7 +114,7 @@ body {
 
 .logo {
     margin: 0px auto;
-    margin-top: 15%;
+    margin-top: 30vh;
     align-self: flex-start;
 }
 
@@ -532,7 +532,7 @@ nav ul li a:hover {
 
 .work p {
     margin-top: 50px;
-    max-width: 600px;
+    max-width: 1000px;
     color: var(--color-palette-gray);
     margin-bottom: 50px;
 }
