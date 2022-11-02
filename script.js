@@ -6,6 +6,7 @@ content = document.querySelector(".content");
 about = document.querySelector(".about");
 experience = document.querySelector(".experience");
 work = document.querySelector(".work");
+contact = document.querySelector(".contact");
 delayLogo = 1000;
 
 document.documentElement.style.setProperty("--delay-logo", delayLogo + "ms");
@@ -65,11 +66,19 @@ function myFunction() {
     document.querySelector(".experience").style.opacity = "0";
   }
 
-  if (inScrollRange(1600, 2100) || screen.width < 1000)
+  if (inScrollRange(1600, 2500) || screen.width < 1000)
   {
     document.querySelector(".work").style.opacity = "1";
   } else
   {
     document.querySelector(".work").style.opacity = "0";
+  }
+
+  if (inScrollRange(2600, 3100) || screen.width < 1000)
+  {
+    document.querySelector(".contact").style.opacity = "1";
+  } else
+  {
+    document.querySelector(".contact").style.opacity = "0";
   }
 }
