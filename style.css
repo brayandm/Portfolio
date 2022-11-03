@@ -195,6 +195,11 @@ header {
     transform: scale(1.1);
 }
 
+.icon-navigation {
+    display: none;
+    color: var(--color-palette-dark-turquoise);
+}
+
 nav {
     float: right;
     padding: 10px;
@@ -693,6 +698,25 @@ nav ul li a:hover {
 
 @media (max-width: 1000px) {
 
+    .wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .icon-navigation {
+        display: inline-block;
+        color: var(--color-palette-dark-turquoise);
+    }
+
+    nav {
+        position: absolute;
+        align-self: center;
+        right: 20px;
+        padding-right: 0px;
+    }
+
     nav ul {
         display: none;
     }
@@ -719,18 +743,18 @@ nav ul li a:hover {
         margin: 20px;
     }
 
-    .about .about-init div{
+    .about .about-init div {
         text-align: start;
         align-self: flex-start;
     }
 
-    .about .about-init .separator{
+    .about .about-init .separator {
         max-width: 230px;
         align-self: flex-start;
         margin-left: 0;
     }
-    
-    .about .about-init{
+
+    .about .about-init {
         display: flex;
         flex-direction: column;
         max-width: 550px;
@@ -747,7 +771,7 @@ nav ul li a:hover {
         padding-right: 0;
         margin: 20px;
     }
-    
+
     .experience .experience-init {
         max-width: 550px;
         display: flex;
@@ -760,30 +784,30 @@ nav ul li a:hover {
         align-self: flex-start;
         margin-left: 0;
     }
-    
+
     .experience-list {
         max-width: 550px;
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .experience-buttons {
         display: flex;
         flex-direction: row;
         align-items: center;
         flex-wrap: wrap;
     }
-    
+
     .experience-button {
         border: 0px;
         border-top: 2px solid var(--color-palette-darker-gray);
         transition: background-color 300ms, color 300ms, border-top-color 300ms;
     }
-    
+
     .experience-button.clicked {
         border-top-color: var(--color-palette-light-turquoise);
     }
-    
+
     .experience-description-section {
         margin-top: 30px;
     }
@@ -798,35 +822,35 @@ nav ul li a:hover {
         align-items: center;
         margin: 20px;
     }
-    
+
     .work .work-init {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .work .work-init div{
+    .work .work-init div {
         text-align: start;
     }
-    
+
     .work-init h1 {
         max-width: 550px;
     }
-    
+
     .work-init h2 {
         max-width: 550px;
     }
-    
+
     .work-init .separator {
         max-width: 550px;
         align-self: flex-start;
         margin-left: 0;
     }
-    
+
     .work p {
         max-width: 550px;
     }
-    
+
     .work-row {
         display: flex;
         flex-direction: column;
@@ -848,11 +872,11 @@ nav ul li a:hover {
     .contact-all {
         max-width: 550px;
     }
-    
+
     .contact-init {
         max-width: 550px;
     }
-    
+
     .contact-links {
         max-width: 550px;
         justify-content: space-evenly;
