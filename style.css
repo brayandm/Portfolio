@@ -299,7 +299,7 @@ nav ul li a:hover {
 .presentation p {
     color: var(--color-palette-gray);
     font-size: 18px;
-    max-width: 700px;
+    max-width: 550px;
     margin-bottom: 50px;
     padding-left: 4px;
     opacity: 0;
@@ -344,7 +344,7 @@ nav ul li a:hover {
 
 .about p {
     margin-top: 50px;
-    max-width: 600px;
+    max-width: 550px;
     color: var(--color-palette-gray);
     margin-bottom: 50px;
 }
@@ -667,7 +667,7 @@ nav ul li a:hover {
     align-self: flex-start;
     margin: 0 auto;
     margin-top: 50px;
-    max-width: 600px;
+    max-width: 550px;
     color: var(--color-palette-gray);
     margin-bottom: 50px;
     text-align: center;
@@ -689,4 +689,172 @@ nav ul li a:hover {
 .contact-icon:hover {
     transform: scale(1.2);
     color: var(--color-palette-light-gray);
+}
+
+@media (max-width: 1000px) {
+
+    nav ul {
+        display: none;
+    }
+
+    .content {
+        margin-top: 100px;
+        max-width: 550px;
+    }
+
+    .presentation {
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 550px;
+        margin: 20px;
+    }
+
+    .about {
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+        flex-direction: column;
+        max-width: 550px;
+        margin: 20px;
+    }
+
+    .about .about-init div{
+        text-align: start;
+        align-self: flex-start;
+    }
+
+    .about .about-init .separator{
+        max-width: 230px;
+        align-self: flex-start;
+        margin-left: 0;
+    }
+    
+    .about .about-init{
+        display: flex;
+        flex-direction: column;
+        max-width: 550px;
+    }
+
+    .about img {
+        margin-left: 0;
+    }
+
+    .experience {
+        max-width: 550px;
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 20px;
+    }
+    
+    .experience .experience-init {
+        max-width: 550px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experience .separator {
+        max-width: 550px;
+        align-self: flex-start;
+        margin-left: 0;
+    }
+    
+    .experience-list {
+        max-width: 550px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .experience-buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .experience-button {
+        border: 0px;
+        border-top: 2px solid var(--color-palette-darker-gray);
+        transition: background-color 300ms, color 300ms, border-top-color 300ms;
+    }
+    
+    .experience-button.clicked {
+        border-top-color: var(--color-palette-light-turquoise);
+    }
+    
+    .experience-description-section {
+        margin-top: 30px;
+    }
+
+    .work {
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 550px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+    
+    .work .work-init {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .work .work-init div{
+        text-align: start;
+    }
+    
+    .work-init h1 {
+        max-width: 550px;
+    }
+    
+    .work-init h2 {
+        max-width: 550px;
+    }
+    
+    .work-init .separator {
+        max-width: 550px;
+        align-self: flex-start;
+        margin-left: 0;
+    }
+    
+    .work p {
+        max-width: 550px;
+    }
+    
+    .work-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-item {
+        align-self: center;
+        margin-right: 0;
+    }
+
+    .contact {
+        max-width: 550px;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 20px;
+    }
+
+    .contact-all {
+        max-width: 550px;
+    }
+    
+    .contact-init {
+        max-width: 550px;
+    }
+    
+    .contact-links {
+        max-width: 550px;
+        justify-content: space-evenly;
+    }
 }
