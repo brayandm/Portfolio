@@ -90,7 +90,7 @@ function myFunction() {
     document.querySelector(".work").style.opacity = "0";
   }
 
-  if (inScrollRange(2600, 3100) || screen.width < 1000) {
+  if (inScrollRange(2600, 3200) || screen.width < 1000) {
     document.querySelector(".contact").style.opacity = "1";
   } else {
     document.querySelector(".contact").style.opacity = "0";
