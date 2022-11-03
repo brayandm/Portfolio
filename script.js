@@ -9,7 +9,18 @@ experienceButtons = document.querySelectorAll(".experience-button");
 experienceDescriptionSections = document.querySelectorAll(".experience-description-section");
 work = document.querySelector(".work");
 contact = document.querySelector(".contact");
+iconNavigation = document.querySelector(".icon-navigation");
 delayLogo = 1000;
+
+iconNavigation.addEventListener("click", onIconNavigationButtonClick);
+
+function onIconNavigationButtonClick(e)
+{
+  e.preventDefault();
+  
+  iconNavigation.classList.toggle("fa-bars");
+  iconNavigation.classList.toggle("fa-times");
+}
 
 for (let i = 0; i < experienceButtons.length; i++) {
   experienceButtons[i].addEventListener("click", onExperienceButtonClick.bind(this, i));
