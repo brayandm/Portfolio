@@ -13,7 +13,7 @@ iconNavigation = document.querySelector(".icon-navigation i");
 iconNavigationNav = document.querySelector(".icon-navigation");
 menu = document.querySelector(".menu.non-display");
 menuNavs = document.querySelectorAll(".menu-nav");
-delayLogo = 1000;
+delayLogo = 4000;
 
 iconNavigation.addEventListener("click", onIconNavigationButtonClick);
 

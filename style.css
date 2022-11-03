@@ -59,26 +59,6 @@
     }
 }
 
-@keyframes went-right {
-    from {
-        transform: translate3d(80vw, 0, 0);
-    }
-    
-    to {
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes go-right {
-    from {
-        transform: translate3d(0, 0, 0);
-    }
-    
-    to {
-        transform: translate3d(80vw, 0, 0);
-    }
-}
-
 @keyframes fade-in-down {
     from {
         transform: translate3d(0, -40px, 0);
@@ -751,8 +731,7 @@ nav ul li a:hover {
     }
 
     .menu.hide {
-        animation: went-right 500ms;
-        animation-fill-mode: both;
+        transform: translate3d(0, 0, 0);
     }
 
     .menu {
@@ -765,6 +744,7 @@ nav ul li a:hover {
         z-index: 20;
         text-align: center;
         transform: translate3d(80vw, 0, 0);
+        transition: transform 500ms;
     }
 
     .menu ul {
@@ -796,6 +776,25 @@ nav ul li a:hover {
     .menu ul li a:hover {
         transition: color 500ms;
         color: var(--color-palette-dark-turquoise);
+    }
+
+    .menu-nav div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+    .menu-nav h1 {
+        font-size: 20px;
+        color: var(--color-palette-light-turquoise);
+        text-align: center;
+    }
+
+    .menu-nav h2 {
+        font-size: 20px;
+        color: var(--color-palette-light-gray);
+        text-align: center;
     }
 
     .nav-about {
