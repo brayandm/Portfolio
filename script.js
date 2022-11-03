@@ -9,7 +9,9 @@ experienceButtons = document.querySelectorAll(".experience-button");
 experienceDescriptionSections = document.querySelectorAll(".experience-description-section");
 work = document.querySelector(".work");
 contact = document.querySelector(".contact");
-iconNavigation = document.querySelector(".icon-navigation");
+iconNavigation = document.querySelector(".icon-navigation i");
+menu = document.querySelector(".menu.non-display");
+menuNavs = document.querySelectorAll(".menu-nav");
 delayLogo = 1000;
 
 iconNavigation.addEventListener("click", onIconNavigationButtonClick);
@@ -20,6 +22,16 @@ function onIconNavigationButtonClick(e)
   
   iconNavigation.classList.toggle("fa-bars");
   iconNavigation.classList.toggle("fa-times");
+  menu.classList.toggle("non-display");
+}
+
+for (let i = 0; i < menuNavs.length; i++) {
+  menuNavs[i].addEventListener("click", onMenuNavButtonClick);
+}
+
+function onMenuNavButtonClick(e)
+{
+  menu.classList.toggle("non-display");
 }
 
 for (let i = 0; i < experienceButtons.length; i++) {

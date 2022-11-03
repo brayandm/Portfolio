@@ -59,6 +59,26 @@
     }
 }
 
+@keyframes went-right {
+    from {
+        transform: translate3d(80vw, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes go-right {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(80vw, 0, 0);
+    }
+}
+
 @keyframes fade-in-down {
     from {
         transform: translate3d(0, -40px, 0);
@@ -706,8 +726,99 @@ nav ul li a:hover {
     }
 
     .icon-navigation {
+        position: fixed;
         display: inline-block;
         color: var(--color-palette-dark-turquoise);
+        right: 20px;
+        top: 20px;
+        z-index: 30;
+    }
+
+    .icon-navigation i.hide{
+        opacity: 0;
+    }
+    
+    .icon-navigation i{
+        z-index: 30;
+        transition: opacity 1s;
+        opacity: 1;
+    }
+
+    .menu.non-display {
+        animation: go-right 500ms;
+        animation-fill-mode: both;
+    }
+
+    .menu {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 80vw;
+        height: 200vh;
+        background-color: var(--color-palette-hover-background);
+        z-index: 20;
+        text-align: center;
+        animation: went-right 500ms;
+        animation-fill-mode: both;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        overflow: hidden;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+    
+    .menu ul li {
+        float: left;
+        font-size: 16px;
+    }
+    
+    .menu ul li a {
+        display: block;
+        padding: 20px;
+        color: var(--color-palette-light-gray);
+        text-decoration: none;
+    }
+    
+    .menu ul li a p {
+        display: inline;
+        color: var(--color-palette-light-turquoise);
+    }
+    
+    .menu ul li a:hover {
+        transition: color 500ms;
+        color: var(--color-palette-dark-turquoise);
+    }
+
+    .nav-about {
+        animation: none;
+        font-size: 30px;
+        margin-top: 20px;
+        opacity: 1;
+    }
+    
+    .nav-experience {
+        animation: none;
+        font-size: 30px;
+        margin-top: 20px;
+        opacity: 1;
+    }
+    
+    .nav-work {
+        animation: none;
+        font-size: 30px;
+        margin-top: 20px;
+        opacity: 1;
+    }
+    
+    .nav-contact {
+        animation: none;
+        font-size: 30px;
+        margin-top: 20px;
+        opacity: 1;
     }
 
     nav {
