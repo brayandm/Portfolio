@@ -10,6 +10,7 @@ experienceDescriptionSections = document.querySelectorAll(".experience-descripti
 work = document.querySelector(".work");
 contact = document.querySelector(".contact");
 iconNavigation = document.querySelector(".icon-navigation i");
+iconNavigationNav = document.querySelector(".icon-navigation");
 menu = document.querySelector(".menu.non-display");
 menuNavs = document.querySelectorAll(".menu-nav");
 delayLogo = 1000;
@@ -22,7 +23,7 @@ function onIconNavigationButtonClick(e)
   
   iconNavigation.classList.toggle("fa-bars");
   iconNavigation.classList.toggle("fa-times");
-  menu.classList.toggle("non-display");
+  menu.classList.toggle("hide");
 }
 
 for (let i = 0; i < menuNavs.length; i++) {
@@ -31,7 +32,9 @@ for (let i = 0; i < menuNavs.length; i++) {
 
 function onMenuNavButtonClick(e)
 {
-  menu.classList.toggle("non-display");
+  iconNavigation.classList.toggle("fa-bars");
+  iconNavigation.classList.toggle("fa-times");
+  menu.classList.toggle("hide");
 }
 
 for (let i = 0; i < experienceButtons.length; i++) {
@@ -69,6 +72,8 @@ function funcLogo() {
     logo.classList.add("non-display");
     body.style.backgroundColor = backgroundColor;
     setTimeout(function () {
+      iconNavigationNav.classList.remove("non-display");
+      menu.classList.remove("non-display");
       header.classList.remove("non-display");
       content.classList.remove("non-display");
       window.onscroll = function () { myFunction() };

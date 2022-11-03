@@ -63,7 +63,7 @@
     from {
         transform: translate3d(80vw, 0, 0);
     }
-
+    
     to {
         transform: translate3d(0, 0, 0);
     }
@@ -73,7 +73,7 @@
     from {
         transform: translate3d(0, 0, 0);
     }
-
+    
     to {
         transform: translate3d(80vw, 0, 0);
     }
@@ -215,9 +215,17 @@ header {
     transform: scale(1.1);
 }
 
-.icon-navigation {
+.icon-navigation.non-display {
     display: none;
     color: var(--color-palette-dark-turquoise);
+}
+
+.menu.non-display {
+    display: none;
+}
+
+.menu ul {
+    display: none;
 }
 
 nav {
@@ -725,6 +733,10 @@ nav ul li a:hover {
         align-items: center;
     }
 
+    .icon-navigation.non-display {
+        display: none;
+    }
+
     .icon-navigation {
         position: fixed;
         display: inline-block;
@@ -733,19 +745,13 @@ nav ul li a:hover {
         top: 20px;
         z-index: 30;
     }
-
-    .icon-navigation i.hide{
-        opacity: 0;
-    }
     
     .icon-navigation i{
         z-index: 30;
-        transition: opacity 1s;
-        opacity: 1;
     }
 
-    .menu.non-display {
-        animation: go-right 500ms;
+    .menu.hide {
+        animation: went-right 500ms;
         animation-fill-mode: both;
     }
 
@@ -758,8 +764,7 @@ nav ul li a:hover {
         background-color: var(--color-palette-hover-background);
         z-index: 20;
         text-align: center;
-        animation: went-right 500ms;
-        animation-fill-mode: both;
+        transform: translate3d(80vw, 0, 0);
     }
 
     .menu ul {
